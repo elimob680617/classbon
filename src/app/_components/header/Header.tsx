@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
           src="/images/logo-light.svg"
           width={100}
           height={36}
-          alt="کلاسبن "
+          alt="کلاسبن"
         />
         <TopNavigation />
         <span className="mr-auto">user authentication</span>
