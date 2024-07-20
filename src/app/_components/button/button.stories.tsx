@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
 
+import results from "../../../../.jest-test-results.json";
+
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
