@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
 
 import results from "../../../../.jest-test-results.json";
+import { withTests } from "@storybook/addon-jest";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -18,20 +19,23 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+export const Tests: Story = {
+  render: (args) => <Button {...args}>Click here</Button>,
+};
+Tests.decorators = [withTests({ results })];
+
 export const BrandColors: Story = {
-  render: () => {
-    return (
-      <>
-        <Button>Default</Button>
-        <Button variant="neutral">Neutral</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="secondary">Secondary</Button>
-        <Button variant="accent">Accent</Button>
-        <Button variant="ghost">Ghost</Button>
-        <Button isLink={true}>Link</Button>
-      </>
-    );
-  },
+  render: () => (
+    <>
+      <Button>Default</Button>
+      <Button variant="neutral">Neutral</Button>
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="accent">Accent</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button isLink={true}>Link</Button>
+    </>
+  ),
 };
 
 export const StateButtons: Story = {
