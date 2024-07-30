@@ -1,6 +1,7 @@
 import { CourseSummary } from "@/types/course-summary.interface";
 import { HomeHeroSection } from "./_components/home-hero-section/HomeHeroSection";
 import CourseCardList from "./(courses)/_components/CourseCardList";
+import { IconClock } from "./_components/icons/icons";
 
 async function getNewestCourses(count: number): Promise<CourseSummary[]> {
   const res = await fetch(
@@ -19,12 +20,15 @@ export default async function Home() {
   return (
     <>
       <HomeHeroSection />
-      <section className="container pt-20">
-        <div className="text-center xl:text-right ">
+      <section className="container  pt-20">
+        <div className="text-center xl:text-right">
           <h2 className="text-2xl font-extrabold">تازه ترین دوره های آموزشی</h2>
-          <p>برای به روز موندن، یاد گرفتن نکته های تازه ضروریه!</p>
+          <p className="mt-3 text-lg">
+            برای به‌روز موندن، یاد گرفتن نکته‌های تازه ضروری‌ه!
+          </p>
         </div>
         <CourseCardList courses={newestCourses} />
+        <IconClock width={250} height={250} stroke="red" />
       </section>
     </>
   );

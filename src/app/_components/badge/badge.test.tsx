@@ -1,6 +1,6 @@
 import { describe } from "node:test";
 import { render, screen } from "@testing-library/react";
-import Badge from "./Badge";
+import { Badge } from "./Badge";
 
 describe("Badge Component", () => {
   test("applies the correct css class for different badge variants", () => {

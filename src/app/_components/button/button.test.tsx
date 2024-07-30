@@ -1,5 +1,5 @@
 import { describe } from "node:test";
-import Button from "./Button";
+import { Button } from "./Button";
 import { render, screen } from "@testing-library/react";
 
 describe("Button Component", () => {

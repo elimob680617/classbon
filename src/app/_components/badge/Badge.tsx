@@ -15,7 +15,7 @@ type BadgeProps = Omit<ComponentBase, "isDisabled"> & {
   children: ReactNode;
 };
 
-const Badge: React.FC<BadgeProps> = ({
+export const Badge: React.FC<BadgeProps> = ({
   variant,
   className,
   children,
@@ -28,5 +28,3 @@ const Badge: React.FC<BadgeProps> = ({
 
   return <span className={classes}>{children}</span>;
 };
-
-export default Badge;

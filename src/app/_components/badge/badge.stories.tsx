@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import results from "../../../../.jest-test-results.json";
 
 import { withTests } from "@storybook/addon-jest";
-import Badge from "./Badge";
+import { Badge } from "./Badge";
 
 const meta: Meta<typeof Badge> = {
   component: Badge,
